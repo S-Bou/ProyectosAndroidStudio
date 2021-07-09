@@ -1,0 +1,176 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<!--
+3  ~ Copyright 2016 Google Inc.
+4  ~
+5  ~ Licensed under the Apache License, Version 2.0 (the "License");
+6  ~ you may not use this file except in compliance with the License.
+7  ~ You may obtain a copy of the License at
+8  ~
+9  ~      http://www.apache.org/licenses/LICENSE-2.0
+10  ~
+11  ~ Unless required by applicable law or agreed to in writing, software
+12  ~ distributed under the License is distributed on an "AS IS" BASIS,
+13  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+14  ~ See the License for the specific language governing permissions and
+15  ~ limitations under the License.
+16-->
+17<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+18    package="com.example.android.wearable.wear.wearnotifications"
+19    android:versionCode="1"
+20    android:versionName="1.0" >
+21
+22    <uses-sdk
+23        android:minSdkVersion="23"
+23-->D:\Projects\ProyectosAndroidStudio\MyNotifications\Wearable\src\main\AndroidManifest.xml
+24        android:targetSdkVersion="29" />
+24-->D:\Projects\ProyectosAndroidStudio\MyNotifications\Wearable\src\main\AndroidManifest.xml
+25
+26    <uses-feature android:name="android.hardware.type.watch" />
+26-->D:\Projects\ProyectosAndroidStudio\MyNotifications\Wearable\src\main\AndroidManifest.xml:22:5-63
+26-->D:\Projects\ProyectosAndroidStudio\MyNotifications\Wearable\src\main\AndroidManifest.xml:22:19-61
+27    <!-- Required for Always-on. -->
+28    <uses-permission android:name="android.permission.WAKE_LOCK" />
+28-->D:\Projects\ProyectosAndroidStudio\MyNotifications\Wearable\src\main\AndroidManifest.xml:24:5-68
+28-->D:\Projects\ProyectosAndroidStudio\MyNotifications\Wearable\src\main\AndroidManifest.xml:24:22-65
+29
+30    <application
+30-->D:\Projects\ProyectosAndroidStudio\MyNotifications\Wearable\src\main\AndroidManifest.xml:26:5-98:19
+31        android:allowBackup="true"
+31-->D:\Projects\ProyectosAndroidStudio\MyNotifications\Wearable\src\main\AndroidManifest.xml:26:18-44
+32        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+32-->[androidx.core:core:1.1.0] C:\Users\bouyo\.gradle\caches\transforms-2\files-2.1\df087b5e2f442bf511b04dd5f84bb83e\core-1.1.0\AndroidManifest.xml:24:18-86
+33        android:debuggable="true"
+34        android:extractNativeLibs="false"
+35        android:icon="@mipmap/ic_launcher"
+35-->D:\Projects\ProyectosAndroidStudio\MyNotifications\Wearable\src\main\AndroidManifest.xml:27:18-52
+36        android:label="@string/app_name"
+36-->D:\Projects\ProyectosAndroidStudio\MyNotifications\Wearable\src\main\AndroidManifest.xml:28:18-50
+37        android:supportsRtl="true"
+37-->D:\Projects\ProyectosAndroidStudio\MyNotifications\Wearable\src\main\AndroidManifest.xml:29:18-44
+38        android:testOnly="true"
+39        android:theme="@android:style/Theme.Material" >
+39-->D:\Projects\ProyectosAndroidStudio\MyNotifications\Wearable\src\main\AndroidManifest.xml:30:18-63
+40
+41        <!-- Let's Play Store know this app is standalone. -->
+42        <meta-data
+42-->D:\Projects\ProyectosAndroidStudio\MyNotifications\Wearable\src\main\AndroidManifest.xml:33:9-96
+43            android:name="com.google.android.wearable.standalone"
+43-->D:\Projects\ProyectosAndroidStudio\MyNotifications\Wearable\src\main\AndroidManifest.xml:33:20-73
+44            android:value="true" />
+44-->D:\Projects\ProyectosAndroidStudio\MyNotifications\Wearable\src\main\AndroidManifest.xml:33:74-94
+45
+46        <!--
+47        Important Note: Usually, you will want to disable bridging if you have a local/native
+48        Wear app creating Notifications. In our case, we don't, as our sample shows both
+49        Notifications launched from a Phone app (that needed to be bridged) and a Wear app.
+50
+51        To disable, create a meta-data tag here:
+52
+53        meta-data
+54            name: com.google.android.wearable.notificationBridgeMode
+55            value: NO_BRIDGING
+56        -->
+57
+58
+59        <!-- If you want your app to run on pre-22, then set required to false -->
+60        <uses-library
+60-->D:\Projects\ProyectosAndroidStudio\MyNotifications\Wearable\src\main\AndroidManifest.xml:48:9-93
+61            android:name="com.google.android.wearable"
+61-->D:\Projects\ProyectosAndroidStudio\MyNotifications\Wearable\src\main\AndroidManifest.xml:48:23-65
+62            android:required="false" />
+62-->D:\Projects\ProyectosAndroidStudio\MyNotifications\Wearable\src\main\AndroidManifest.xml:48:66-90
+63
+64        <activity
+64-->D:\Projects\ProyectosAndroidStudio\MyNotifications\Wearable\src\main\AndroidManifest.xml:50:9-56:20
+65            android:name="com.example.android.wearable.wear.wearnotifications.StandaloneMainActivity"
+65-->D:\Projects\ProyectosAndroidStudio\MyNotifications\Wearable\src\main\AndroidManifest.xml:50:19-57
+66            android:label="@string/app_name" >
+66-->D:\Projects\ProyectosAndroidStudio\MyNotifications\Wearable\src\main\AndroidManifest.xml:51:19-51
+67            <intent-filter>
+67-->D:\Projects\ProyectosAndroidStudio\MyNotifications\Wearable\src\main\AndroidManifest.xml:52:13-55:29
+68                <action android:name="android.intent.action.MAIN" />
+68-->D:\Projects\ProyectosAndroidStudio\MyNotifications\Wearable\src\main\AndroidManifest.xml:53:17-69
+68-->D:\Projects\ProyectosAndroidStudio\MyNotifications\Wearable\src\main\AndroidManifest.xml:53:25-66
+69
+70                <category android:name="android.intent.category.LAUNCHER" />
+70-->D:\Projects\ProyectosAndroidStudio\MyNotifications\Wearable\src\main\AndroidManifest.xml:54:17-77
+70-->D:\Projects\ProyectosAndroidStudio\MyNotifications\Wearable\src\main\AndroidManifest.xml:54:27-74
+71            </intent-filter>
+72        </activity>
+73        <activity
+73-->D:\Projects\ProyectosAndroidStudio\MyNotifications\Wearable\src\main\AndroidManifest.xml:59:9-63:20
+74            android:name="com.example.android.wearable.wear.wearnotifications.handlers.BigTextMainActivity"
+74-->D:\Projects\ProyectosAndroidStudio\MyNotifications\Wearable\src\main\AndroidManifest.xml:60:13-57
+75            android:label="@string/title_activity_big_text_main"
+75-->D:\Projects\ProyectosAndroidStudio\MyNotifications\Wearable\src\main\AndroidManifest.xml:61:13-65
+76            android:taskAffinity="" >
+76-->D:\Projects\ProyectosAndroidStudio\MyNotifications\Wearable\src\main\AndroidManifest.xml:62:13-36
+77        </activity>
+78        <activity
+78-->D:\Projects\ProyectosAndroidStudio\MyNotifications\Wearable\src\main\AndroidManifest.xml:65:9-69:20
+79            android:name="com.example.android.wearable.wear.wearnotifications.handlers.BigPictureSocialMainActivity"
+79-->D:\Projects\ProyectosAndroidStudio\MyNotifications\Wearable\src\main\AndroidManifest.xml:66:13-66
+80            android:label="@string/title_activity_big_picture_main"
+80-->D:\Projects\ProyectosAndroidStudio\MyNotifications\Wearable\src\main\AndroidManifest.xml:67:13-68
+81            android:taskAffinity="" >
+81-->D:\Projects\ProyectosAndroidStudio\MyNotifications\Wearable\src\main\AndroidManifest.xml:68:13-36
+82        </activity>
+83        <activity
+83-->D:\Projects\ProyectosAndroidStudio\MyNotifications\Wearable\src\main\AndroidManifest.xml:72:9-76:20
+84            android:name="com.example.android.wearable.wear.wearnotifications.handlers.InboxMainActivity"
+84-->D:\Projects\ProyectosAndroidStudio\MyNotifications\Wearable\src\main\AndroidManifest.xml:73:13-55
+85            android:label="@string/title_activity_inbox_main"
+85-->D:\Projects\ProyectosAndroidStudio\MyNotifications\Wearable\src\main\AndroidManifest.xml:74:13-62
+86            android:taskAffinity="" >
+86-->D:\Projects\ProyectosAndroidStudio\MyNotifications\Wearable\src\main\AndroidManifest.xml:75:13-36
+87        </activity>
+88        <activity
+88-->D:\Projects\ProyectosAndroidStudio\MyNotifications\Wearable\src\main\AndroidManifest.xml:78:9-82:20
+89            android:name="com.example.android.wearable.wear.wearnotifications.handlers.MessagingMainActivity"
+89-->D:\Projects\ProyectosAndroidStudio\MyNotifications\Wearable\src\main\AndroidManifest.xml:79:13-59
+90            android:label="@string/title_activity_messaging_main"
+90-->D:\Projects\ProyectosAndroidStudio\MyNotifications\Wearable\src\main\AndroidManifest.xml:80:13-66
+91            android:taskAffinity="" >
+91-->D:\Projects\ProyectosAndroidStudio\MyNotifications\Wearable\src\main\AndroidManifest.xml:81:13-36
+92        </activity>
+93
+94        <service
+94-->D:\Projects\ProyectosAndroidStudio\MyNotifications\Wearable\src\main\AndroidManifest.xml:84:9-87:19
+95            android:name="com.example.android.wearable.wear.wearnotifications.handlers.BigTextIntentService"
+95-->D:\Projects\ProyectosAndroidStudio\MyNotifications\Wearable\src\main\AndroidManifest.xml:85:13-58
+96            android:exported="false" >
+96-->D:\Projects\ProyectosAndroidStudio\MyNotifications\Wearable\src\main\AndroidManifest.xml:86:13-37
+97        </service>
+98        <service
+98-->D:\Projects\ProyectosAndroidStudio\MyNotifications\Wearable\src\main\AndroidManifest.xml:89:9-92:19
+99            android:name="com.example.android.wearable.wear.wearnotifications.handlers.MessagingIntentService"
+99-->D:\Projects\ProyectosAndroidStudio\MyNotifications\Wearable\src\main\AndroidManifest.xml:90:13-60
+100            android:exported="false" >
+100-->D:\Projects\ProyectosAndroidStudio\MyNotifications\Wearable\src\main\AndroidManifest.xml:91:13-37
+101        </service>
+102        <service
+102-->D:\Projects\ProyectosAndroidStudio\MyNotifications\Wearable\src\main\AndroidManifest.xml:94:9-97:19
+103            android:name="com.example.android.wearable.wear.wearnotifications.handlers.BigPictureSocialIntentService"
+103-->D:\Projects\ProyectosAndroidStudio\MyNotifications\Wearable\src\main\AndroidManifest.xml:95:13-67
+104            android:exported="false" >
+104-->D:\Projects\ProyectosAndroidStudio\MyNotifications\Wearable\src\main\AndroidManifest.xml:96:13-37
+105        </service>
+106
+107        <activity
+107-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\bouyo\.gradle\caches\transforms-2\files-2.1\5d8bee59a82526eeea78e2d510654d9f\jetified-play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
+108            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+108-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\bouyo\.gradle\caches\transforms-2\files-2.1\5d8bee59a82526eeea78e2d510654d9f\jetified-play-services-base-17.0.0\AndroidManifest.xml:24:13-79
+109            android:exported="false"
+109-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\bouyo\.gradle\caches\transforms-2\files-2.1\5d8bee59a82526eeea78e2d510654d9f\jetified-play-services-base-17.0.0\AndroidManifest.xml:25:13-37
+110            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+110-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\bouyo\.gradle\caches\transforms-2\files-2.1\5d8bee59a82526eeea78e2d510654d9f\jetified-play-services-base-17.0.0\AndroidManifest.xml:26:13-72
+111
+112        <meta-data
+112-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\bouyo\.gradle\caches\transforms-2\files-2.1\a4564273a0f10cadd31b356ef6b80ba0\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+113            android:name="com.google.android.gms.version"
+113-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\bouyo\.gradle\caches\transforms-2\files-2.1\a4564273a0f10cadd31b356ef6b80ba0\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
+114            android:value="@integer/google_play_services_version" />
+114-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\bouyo\.gradle\caches\transforms-2\files-2.1\a4564273a0f10cadd31b356ef6b80ba0\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+115    </application>
+116
+117</manifest>

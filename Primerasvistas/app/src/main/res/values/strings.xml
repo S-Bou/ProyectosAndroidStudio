@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Mis primeras vistas</string>
+    <string name="text_nombre">Nombre</string>
+    <string name="checkbox_1">Guardar automáticamente</string>
+</resources>
